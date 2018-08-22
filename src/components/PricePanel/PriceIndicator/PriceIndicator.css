@@ -1,0 +1,88 @@
+.price-indicator-container {
+    position: relative;
+    display: flex;
+    flex: 1 1 8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.price-indicator {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0.2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(146, 146, 146);
+    height: 3rem;
+    flex: 1 1 8rem;
+    
+}
+
+
+
+.price-indicator-align-left {
+    margin-left: 0.5rem;
+    align-items: flex-start;
+    border-right: none;
+}
+
+.price-indicator-align-right {
+    margin-right: 0.5rem;
+    align-items: flex-end;
+    border-left: none;
+}
+
+.price-indicator-caption {
+    font-size: 0.6rem;
+}
+
+.price-indicator-value {
+    font-size: 1.2rem;
+}
+
+.sell {
+    color: red;
+}
+
+.buy {
+    color: green;
+}
+
+.bigger {
+    font-size: 1.6rem;
+}
+
+.super {
+    vertical-align: super;
+} 
+
+.price-indicator-triangle-right{
+    position: relative;
+    z-index: 1;
+    right: 1.2rem;
+    top: 0.3rem;
+    box-sizing: border-box;
+    background-color: rgb(236, 236, 236);
+    width: 2.37rem;
+    height: 2.37rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(146, 146, 146);
+    transform:rotate(45deg);
+}
+
+.price-indicator-triangle-left{
+    position: relative;
+    z-index: 1;
+    left: 1.2rem;
+    top: 0.3rem;
+    box-sizing: border-box;
+    background-color: rgb(236, 236, 236);
+    width: 2.37rem;
+    height: 2.37rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(146, 146, 146);
+    transform:rotate(45deg);
+}
