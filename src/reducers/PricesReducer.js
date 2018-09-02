@@ -16,6 +16,8 @@ const mockedData = [
 ]
 const initialState = {
     prices: [],
+    isPricesLoading: false,
+    priecesLoadFailure: "",
   }
   
   export default (state = initialState, action) => {
@@ -23,20 +25,25 @@ const initialState = {
       case FETCH_INITIAL_PRICES_SUCCESS:
         return {
           ...state,
-          isIncrementing: true
+          prices: [...state.prices, ...mockedData],
+          isPricesLoading: false,
+          priecesLoadFailure: "",
         }
   
       case FETCH_INITIAL_PRICES_FAILURE:
         return {
-          ...state,
-          count: state.count + 1,
-          isIncrementing: !state.isIncrementing
+            ...state,
+            prices: [],
+            isPricesLoading: false,
+            priecesLoadFailure: "Unable to laoad prices",
         }
   
       case FETCH_INITIAL_PRICES_REQUESTED:
         return {
           ...state,
-          isDecrementing: true
+          prices: [],
+          isPricesLoading: true,
+          priecesLoadFailure: "",
         }
   
       default:
